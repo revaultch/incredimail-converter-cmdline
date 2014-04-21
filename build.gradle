@@ -1,0 +1,42 @@
+apply plugin: 'java'
+apply plugin: 'eclipse'
+apply plugin:'application'
+
+
+mainClassName = "ch.takoyaki.incredimail.IncredimailConverterMain"
+sourceCompatibility = 1.8
+version = '1.0'
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Incredimail converter', 'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.slf4j',           name: 'slf4j-api',           version: '1.7.5'
+    compile group: 'org.slf4j',           name: 'jcl-over-slf4j',      version: '1.7.5'
+    compile group: 'org.slf4j',           name: 'jul-to-slf4j',        version: '1.7.5'
+    compile group: 'ch.qos.logback',      name: 'logback-classic',     version: '1.0.13'    
+    compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
+    compile group: 'commons-codec',       name: 'commons-codec',       version: '1.9'
+    compile group: 'org.projectlombok'  , name: 'lombok',              version: '1.12.6'
+    compile group: 'org.xerial'         , name: 'sqlite-jdbc',         version: '3.7.15-M1'
+    compile group: 'com.google.guava'   , name: 'guava',               version: '17.0-rc2'    
+    testCompile group: 'junit', name: 'junit', version: '4.+'
+}
+
+test {
+    systemProperties 'property': 'value'
+}
+
+uploadArchives {
+    repositories {
+       flatDir {
+           dirs 'repos'
+       }
+    }
+}
