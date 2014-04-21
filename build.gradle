@@ -5,10 +5,11 @@ apply plugin:'application'
 
 mainClassName = "ch.takoyaki.incredimail.IncredimailConverterMain"
 sourceCompatibility = 1.8
-version = '1.0'
+version = '1.0.0'
 jar {
     manifest {
-        attributes 'Implementation-Title': 'Incredimail converter', 'Implementation-Version': version
+        attributes 'Implementation-Title':   'Incredimail converter', 
+                   'Implementation-Version': version
     }
 }
 
@@ -20,7 +21,7 @@ dependencies {
     compile group: 'org.slf4j',           name: 'slf4j-api',           version: '1.7.5'
     compile group: 'org.slf4j',           name: 'jcl-over-slf4j',      version: '1.7.5'
     compile group: 'org.slf4j',           name: 'jul-to-slf4j',        version: '1.7.5'
-    compile group: 'ch.qos.logback',      name: 'logback-classic',     version: '1.0.13'    
+    compile group: 'ch.qos.logback',      name: 'logback-classic',     version: '1.0.13'
     compile group: 'commons-collections', name: 'commons-collections', version: '3.2'
     compile group: 'commons-codec',       name: 'commons-codec',       version: '1.9'
     compile group: 'org.projectlombok'  , name: 'lombok',              version: '1.12.6'

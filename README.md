@@ -8,7 +8,10 @@ Only the Incredimail2 format is supported (upgrade to Incredimail2 first, this s
 RUN
 ---
 
-  build/install/incredimail-converter-cmdline/bin/incredimail-converter-cmdline <incredimail dir> <empty output dir>
+Unzip the distribution and run with:
+
+    unzip incredimail-converter-cmdline-1.0.0.zip
+    ./incredimail-converter-cmdline-1.0.0/bin/incredimail-converter-cmdline <incredimail dir> <empty output dir>
 	
 where incredimail dir is the Message Store directory under your Incredimail identity
 and <empty output dir> is an empty or not existing directory, where the eml files will be placed.	
@@ -17,6 +20,8 @@ and <empty output dir> is an empty or not existing directory, where the eml file
 BUILD
 -----
 
-  gradle clean installApp
+    gradle clean installApp
+
+
   
   

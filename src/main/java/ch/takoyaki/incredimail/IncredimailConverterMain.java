@@ -75,7 +75,7 @@ public class IncredimailConverterMain {
 	private static void usage(String message, Object... args) {
 		System.err.println(String.format(message, args));
 		System.out
-				.println("incredimail-converter <incredimail dir> <empty output dir>");
+				.println("incredimail-converter-cmdline <incredimail dir> <empty output dir>\n");
 		System.exit(-1);
 	}
 }
